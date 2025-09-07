@@ -6,6 +6,11 @@ import "./Navbar.scss";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const handleDownload = () => {
+    const downloadUrl = process.env.REACT_APP_RESUME_LINK;
+    window.open(downloadUrl, "_blank");
+  };
+
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
@@ -21,7 +26,6 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-
       <div className="app__navbar-menu">
         <HiMenuAlt4 onClick={() => setToggle(true)} />
 
@@ -43,6 +47,9 @@ const Navbar = () => {
           </motion.div>
         )}
       </div>
+      <button class="app__download_btn" onClick={handleDownload}>
+        Download Resume
+      </button>
     </nav>
   );
 };

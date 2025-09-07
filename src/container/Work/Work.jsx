@@ -42,23 +42,19 @@ const Work = () => {
       </h2>
 
       <div className="app__work-filter">
-        {[
-          "MERN Apps",
-          "Tailwind + React",
-          "EJS Web Apps",
-          "Blockchain",
-          "All",
-        ].map((item, index) => (
-          <div
-            key={item + index}
-            onClick={() => handleWorkFilter(item)}
-            className={`app__work-filter-item app_flex p-text ${
-              activeFilter === item ? "item-active" : ""
-            }`}
-          >
-            {item}
-          </div>
-        ))}
+        {["MERN Apps", "Tailwind + React", "EJS Web Apps", "NextJS", "All"].map(
+          (item, index) => (
+            <div
+              key={item + index}
+              onClick={() => handleWorkFilter(item)}
+              className={`app__work-filter-item app_flex p-text ${
+                activeFilter === item ? "item-active" : ""
+              }`}
+            >
+              {item}
+            </div>
+          )
+        )}
       </div>
 
       <motion.div

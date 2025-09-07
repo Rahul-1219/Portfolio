@@ -166,3 +166,16 @@
     display: none;
   }
 }
+
+.app__download_btn {
+  background-color: #313bac;
+  color: #ffffff;
+  padding: 0.5rem 1rem; // same as Tailwind's py-2 px-4
+  border-radius: 0.375rem; // same as Tailwind's rounded
+  cursor: pointer;
+  font-family: var(--font-base);
+
+  &:hover {
+    background-color: #2a2e94; // slightly darker on hover
+  }
+}
